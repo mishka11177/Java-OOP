@@ -1,9 +1,8 @@
-package ge.example.testautomation.JavaOOP.figures;
-
-import ge.example.testautomation.JavaOOP.util.numberOfInstances;
+package example.testautomation.JavaOOP.figures;
 
 public class Circle {
     private double radius;
+    public static int numberOfCircleInstances = 0;
 
     public double getRadius () {
         return radius;
@@ -15,11 +14,11 @@ public class Circle {
 
     public Circle (double radius) {
         if (radius < 0) {
-            throw new IlligalArgumentException(
+            throw new IllegalArgumentException(
                     "Radius cannot be negative"
             );
         }
         this.radius =radius;
-        numberOfInstances = numberOfInstances + 1;
+        numberOfCircleInstances++;
     }
 }
